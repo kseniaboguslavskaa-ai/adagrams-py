@@ -1,5 +1,6 @@
 # AdaGrams
 
+Starting my Adagrams project.
 ## Skills Assessed
 
 - Following directions and reading comprehension
