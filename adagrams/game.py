@@ -145,11 +145,36 @@ def score_word(word):
     return score
 
 
-
-
-
-
-
-
 def get_highest_word_score(word_list):
-    pass
+    #Starting with the first ford so we have somthing to compare
+    winning_word = word_list[0]
+
+    #Save score, so we can compare scores
+    winning_score = score_word(winning_word)
+
+    #Check every word in the list
+    for word in word_list:
+
+        #Find the score for the word
+        current_score = score_word(word)
+
+        #If this word has more points, make it the new winner
+        if current_score > winning_score:
+            winning_word = word
+            winning_score = current_score
+
+        #If the score are the sam, use the tie rules
+        elif current_score == winning_score:
+
+            #A 10 letter word wins the tie
+            if len(word) == 10 and len(winning_word) != 10:
+                winning_word = word
+                winning_score = current_score
+
+            #If it is not 10 letter word, keep the shorter one
+            elif len(winning_word) != 10 and len(word) < len(winning_word):
+                winning_word = word
+                winning_score = current_score
+
+    #Check back he winner and score
+    return (winning_word, winning_score)
