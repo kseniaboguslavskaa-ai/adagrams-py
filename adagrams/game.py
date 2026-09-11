@@ -68,7 +68,29 @@ def draw_letters():
     return letter_bank
 
 def uses_available_letters(word, letter_bank):
-    pass
+    #Make an empty copy of the hand
+    letter_copy = []
+
+    #Add all letters from the original hand to the copy
+    for letter in letter_bank:
+        letter_copy.append(letter)
+
+    #Make the word uppercase so it matches the hand
+    word = word.upper()
+
+    #Go through each letter in the word
+    for letter in word:
+
+        #If the letter is available, use it once
+        if letter in letter_copy:
+            letter_copy.remove(letter)
+
+        #If the letter is missing, we can not make the word
+        else:
+            return False
+        
+    #If all letters were found, we can make the word
+    return True
 
 def score_word(word):
     pass
