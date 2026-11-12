@@ -33,7 +33,7 @@ def draw_letters():
     #Create an empty pool for all letters
     letter_pool = []
 
-    #Go throwgh each letter
+    # Go through each letter
     for letter in how_many_letters:
 
         #Get how many times this letter should appear
