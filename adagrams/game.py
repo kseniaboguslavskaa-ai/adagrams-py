@@ -4,7 +4,7 @@ def draw_letters():
     #Store how many times each letter appears
     how_many_letters = {
         'A': 9, 
-         'B': 2, 
+        'B': 2, 
         'C': 2, 
         'D': 4, 
         'E': 12, 
