@@ -40,7 +40,7 @@ def draw_letters():
         amount = how_many_letters[letter]
 
         #Add the letter to the pool the correct number of times
-        for i in range(amount):
+        for _ in range(amount):
             letter_pool.append(letter)
 
     #Create an empty hand 
